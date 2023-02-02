@@ -1,6 +1,4 @@
-﻿DROP DATABASE IF EXISTS cafe;
-
-CREATE DATABASE cafe;
+﻿CREATE OR REPLACE DATABASE cafe;
 
 USE cafe;
 
@@ -49,7 +47,7 @@ CREATE TABLE `orderdetails` (
 
 
 
-LOAD DATA LOCAL INFILE '/root/repo/mariadb_scripts/practice/csv/customer.csv'
+LOAD DATA LOCAL INFILE '/root/MariaDB/csv/customer.csv'
 INTO TABLE customer
 CHARACTER SET utf8
 FIELDS TERMINATED BY ','
@@ -57,7 +55,7 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA LOCAL INFILE '/root/repo/mariadb_scripts/practice/csv/employee.csv'
+LOAD DATA LOCAL INFILE '/root/MariaDB/csv/employee.csv'
 INTO TABLE employee
 CHARACTER SET utf8
 FIELDS TERMINATED BY ','
@@ -65,7 +63,7 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA LOCAL INFILE '/root/repo/mariadb_scripts/practice/csv/beverage.csv'
+LOAD DATA LOCAL INFILE '/root/MariaDB/csv/beverage.csv'
 INTO TABLE beverage
 CHARACTER SET utf8
 FIELDS TERMINATED BY ','
@@ -73,7 +71,7 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA LOCAL INFILE '/root/repo/mariadb_scripts/practice/csv/orders.csv'
+LOAD DATA LOCAL INFILE '/root/MariaDB/csv/orders.csv'
 INTO TABLE orders
 CHARACTER SET utf8
 FIELDS TERMINATED BY ','
@@ -81,7 +79,7 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA LOCAL INFILE '/root/repo/mariadb_scripts/practice/csv/orderdetails.csv'
+LOAD DATA LOCAL INFILE '/root/MariaDB/csv/orderdetails.csv'
 INTO TABLE orderdetails
 CHARACTER SET utf8
 FIELDS TERMINATED BY ','
